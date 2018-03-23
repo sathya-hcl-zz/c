@@ -1,0 +1,467 @@
+Question paper - C:
+
+                                          Section A- Marks (5)
+
+1. Allocate memory for a 2 dimensional array dynamically using malloc /calloc.
+2. Reverse a single link list without using recursion.
+3. Write a Macro to byteswap a 32bit integer.
+4. Find the most common ancestor of two nodes in a binary search tree.
+
+                                           Section B- Marks (2) 
+
+ 
+1. int num;  /* integer size is 32 bit */
+  Write the expression to clear the 9th bit in num.
+
+2.  What is the output of the following program. 
+
+int x=3;
+int y = 5;
+
+main()
+{
+    int x =x;
+    static y;
+    y = y;
+    printf("%d %d", x, y);
+}
+
+3.  What is the output of the following program.  
+
+main()
+{
+   char arr[][3] =  { {'1', '2'}, {'4' , '5'} };
+   printf(" %s\n",  arr + 1);
+}
+
+4.  What is the output of the following program.  
+
+main()
+{
+   char *pt, *ptr;
+    pt = (char *) malloc(5);
+    strcpy(pt, "abcd");
+    ptr =  (char *) realloc(pt, 10);
+    ptr = pt;
+    ptr = pt + strlen(pt);
+    strcpy(ptr, "ef");
+    printf(" %s\n",  pt);
+}
+
+5.  What is the output of the following program. 
+
+main()
+{
+   union {
+       struct {
+           char c[2];
+           char ch[2];
+       } s;
+       struct {
+           int i;
+           int j;
+       } st;
+           
+}u = {12, 1};
+
+    printf( "%d %d\n", u.st.i, u.st.j);
+}
+
+6. What is the output of the following program.
+
+#if  ~(i^i)
+#error  "deadbeef"
+#endif
+
+main()
+{
+     printf( "Hello World\n",);
+}
+
+7. What is the output of the following program. 
+
+int *f1(void)
+{
+    int x = 10;
+    return (&x);
+}
+
+int *f2(void)
+{
+    int *ptr;
+    *ptr = 10;
+    return ptr;
+}
+
+int *f3(void)
+{
+   int *ptr;
+   ptr = (int *) malloc(sizeof (int));
+  *ptr = 10;
+   return ptr;
+}
+
+main()
+{
+   int r1, r2, r3;
+
+   r1 = f1();
+   r2 = f2();
+   r3 = f3();
+   printf(" %d %d %d\n", r1, r2, r3);
+}
+
+8. What is the output of the following program.   
+
+static unsigned char arr[5] =  { 1, 2, 3, 4 , 5 };
+
+main()
+{
+    struct ad {
+        unsigned short a;
+        unsigned short b ;
+    };
+
+    struct ad *it;
+    it = (struct ad *) arr;
+    printf( "%d, %d\n", it->a, it->b);
+}
+
+9.  What is the output of the following program.
+
+main()
+{
+    printf(" %d\n", sizeof(65555));
+    printf( "%d\n", sizeof(65555L));
+    printf(" %d\n", sizeof(6.5F));
+    printf(" %d\n", sizeof(6.5));
+    printf( "%d\n", sizeof(6.5L));
+}
+
+10.   int * (*test) (float *, float *);
+ type of test is ?
+
+11. What is the output of the following program. 
+
+main()
+{
+   int a = 3, b =5;
+   a ^=b;
+   b ^= a;
+   a ^=b;
+   printf( "%d, %d\n", a, b);
+}
+
+12.  What is the output of the following program.
+
+main()
+{
+   union {
+       struct {
+           char c[2];
+           char ch[2];
+       } s;
+       struct {
+           int i;
+           int j;
+       } st;
+           
+    }u = { {12, 1} , {15, 1} };
+
+    printf(" %d %d\n", u.st.i, u.st.j);
+}
+
+13. What is the output of the following program.
+
+main()
+{
+    printf( "ABCDE" + sizeof("ABC"));
+}
+
+14.  Which of the following function will require more stack space?
+
+int f1 ( int count)
+{
+    if (count == 1) {
+       char buf[30];
+       ......
+    }
+}
+
+int f2 ( int count)
+{
+    char buf[30];
+    if (count == 1) {
+        ......
+    }
+}
+
+15. What is the output of the following program. 
+
+void f1(int a, ...)
+{
+    int i;
+    int *j = &a;
+
+    for (i = 0;  i <= a; i++) {
+      ++j;
+      printf(" %d\n", sum);
+    }     
+}
+
+main()
+{
+   f1 (4, 10, 20, 30, 40, 50);  
+}
+
+16. What is the output of the following program with 16 & 32 bit system. 
+
+main()
+{
+   unsigned a = 65545;
+   unsigned b = 65545;
+   unsigned c = a + b;
+   printf( "%u\n", c);
+}
+
+17. What is the output of the following program.
+
+void f1(char *q)
+{
+    char *r = q + strlen(q) -1;;
+    for (;  q < r; q++, r--) {
+       *q = *q ^ *r;
+       *r = *r ^ *q;
+       *q = *q ^ *r;
+       printf(" %d\n", sum);
+   }     
+}
+
+main()
+{
+   char *p = " tit for tat";
+   f1(p);
+   printf( %s\n", p);
+}
+
+18. What is the value of p.b[0] and p.b[1] in the following program?
+
+typedef union {
+           unsigned int a;
+           unsigned char b[2] ;
+    } test;
+
+    test p = {576};
+ 
+19. What is the output of the following program. 
+
+main()
+{
+   char  *p;
+   char *line[] = { "sunday", "monday", "tuesday" };
+   if (p = strstr(line[0], "day"))
+   printf( %s\n", p);
+}
+
+20. What is the output of the following program. 
+main()
+{
+   char  *p;
+   char *line[] = { "monday", "tuesday" };
+   if (p = strchr(line[0], 'd'))
+   printf( " %s\n", p);
+}
+
+21. What is the output of the following program. 
+
+main()
+{
+   #line 5 " try.c"
+   printf( "%s, %d\n", __FILE__, __LINE__);
+}
+
+22.  What is the output of the following program. 
+
+main()
+{
+   unsigned int i = 0x53;
+   unsigned int j = 0x12;
+   unsigned int sub;
+
+_asm {
+  mov      eax, i;
+  sub        eax, j;
+  mov      sub, eax;
+}
+
+   printf( "%x\n", sub);
+}
+
+                                        Section C- Marks (1)
+
+
+1. What is the output of the following program. 
+
+main()
+{
+   int sum;
+   enum tmp { A, B, C = 5, D, E };
+   sum  = A + B +C +D+E;
+   printf( "%d\n", sum);
+}
+
+2. What is the output of the following program. 
+
+main()
+{
+   char ar[3] =  {'a', 'b'};
+   char arr[] =  {'a', 'b'};
+   printf( "%s %s\n", ar, arr);
+}
+
+3. What is the output of the following program. 
+
+main()
+{
+   int a[2];
+   a[1] = 3;
+   printf( %d\n", 1[a] );
+}
+
+4. What is the output of the following program.
+
+main()
+{
+   int sum = 300;
+   printf( "%d\n", (char)sum);
+}
+
+5. A function type float f() actually returns which type?
+
+6. What is the output of the following program. 
+
+main()
+{
+   printf( "%d\n", printf("abc"));
+}
+
+7. What is the output of the following program. 
+
+main()
+{
+   float sum = 3 / 2.0 + 1 / 2;
+   printf( "sum=%.3\n", sum);
+}
+
+8. What is the output of the following program with 16 & 32 bit system. 
+
+main()
+{
+   float sum[3];
+   printf("%d  %d\n", sizeof(sum), sizeof(&sum));
+}
+
+9.  What is the output of the following program. 
+
+int f1(void)
+{
+    printf(" I’m in func1\n");
+}
+
+int f2(void)
+{
+    printf(" I’m in func2\n");
+}
+
+main()
+{
+   int (*ptr[2]) ();
+   ptr[0] = f2;
+   ptr[1] = f1;
+   ptr[0]();
+}
+
+10. What is the output of the following program. )
+
+main()
+{
+   char a[3][3] = { {‘a’, ‘b’, ‘c’}, {‘p’, ‘q’, ‘r’}, {‘x’, ‘y’,}};
+   char **p;
+   *p = a[0];
+   printf(" %s\n", *p );
+}
+
+10. What is the output of the following program. 
+
+main()
+{
+   printf(" %d\n", 3 && 2);
+}
+
+11. What is the output of the following program. 
+
+main()
+{
+   int sum;
+   printf(" %d\n", sum^sum);
+}
+
+12. What is the output of the following program. 
+
+main()
+{
+   printf(" %d\n", 3 || 2);}
+}
+
+13.  What is the output of the following program. 
+
+#if 0
+Int i;
+#endif
+
+main()
+{
+   i = 10;
+   printf(" %d\n",  i);
+}
+
+14. What is the output of the following program. 
+main()
+{
+   Char a[3][3] = { “abc”, “pqr”, “xyz”};
+   printf(" %c\n", a[2][2] );
+}
+
+16. What is the output of the following program. 
+
+main()
+{
+   char a[3][3] = { ‘a’, ‘b’, ‘c’, ‘p’, ‘q’, ‘r’, ‘x’, ‘y’ };
+   printf(" %s\n", a[2] );
+}
+
+15. What is the output of the following program. 
+
+main()
+{
+   int sum = o24;
+   printf(" %d\n", sum );
+}
+
+16. What is the output of the following program. 
+
+#define COM(x, y)   x##y
+main()
+{
+   int sum = COM(200, 7);
+   printf(" %d\n", sum);
+}
+
+17. What is the output of the following program. 
+
+main()
+{
+   int sum;
+   printf(" %d\n", sum^sum);
+}
+
