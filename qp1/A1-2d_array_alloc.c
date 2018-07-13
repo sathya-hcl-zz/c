@@ -1,3 +1,6 @@
+/*
+ * 1. Allocate memory for a 2 dimensional array dynamically using malloc /calloc.
+ */
 #include <stdio.h>
 #include <stdlib.h>
  
